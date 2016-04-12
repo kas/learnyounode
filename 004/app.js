@@ -2,7 +2,7 @@
 
 var fs = require('fs');
 
-function collect(err, data) {
+function callback(err, data) {
 	fileStringArray = data.toString().split("\n");
 	newLines=0;
 
@@ -15,4 +15,4 @@ function collect(err, data) {
 	console.log(newLines);
 }
 
-var fileString = fs.readFile(process.argv[2], collect);
+var fileString = fs.readFile(process.argv[2], callback);
